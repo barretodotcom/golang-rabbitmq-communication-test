@@ -11,7 +11,7 @@ func ConsumeMessage() {
 
 	go func() {
 		for {
-			result, _ := channel.Consume("golang_teste", "", true, false, false, false, amqp.Table{})
+			result, _ := channel.Consume("golang_test", "", true, false, false, false, amqp.Table{})
 			resultString := string((<-result).Body)
 			fmt.Print(resultString)
 		}

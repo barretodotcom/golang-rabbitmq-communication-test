@@ -19,10 +19,10 @@ func GetChannel() *amqp.Channel {
 	}
 	channelRabbitmq, err := conn.Channel()
 
-	_, err = channelRabbitmq.QueueDeclare("golang_teste", true, false, false, false, nil)
+	_, err = channelRabbitmq.QueueDeclare("golang_test", true, false, false, false, nil)
 
 	if err != nil {
-		fmt.Println("Erro ao declarar a Fila(Queue): ")
+		fmt.Println("Error while declaring Queue: ")
 		log.Fatal(err.Error())
 	}
 

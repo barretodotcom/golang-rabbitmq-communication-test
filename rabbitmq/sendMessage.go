@@ -15,9 +15,9 @@ func SendMessage() {
 
 	go func() {
 		for {
-			err := channel.Publish("", "golang_teste", false, false, msg)
+			err := channel.Publish("", "golang_test", false, false, msg)
 			if err != nil {
-				log.Fatal("Erro ao publicar mensagem: \n", err.Error())
+				log.Fatal("Error while publishing message: \n", err.Error())
 			}
 		}
 	}()
