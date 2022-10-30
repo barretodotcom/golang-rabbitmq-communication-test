@@ -14,7 +14,7 @@ func GetChannel() *amqp.Channel {
 	conn, err := amqp.Dial(amqpServerUrl)
 
 	if err != nil {
-		fmt.Println("Erro ao conectar ao Rabbitmq:")
+		fmt.Println("Error while connecting to Message Broker:")
 		log.Fatal(err.Error())
 	}
 	channelRabbitmq, err := conn.Channel()
